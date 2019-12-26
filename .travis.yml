@@ -35,6 +35,8 @@ before_install:
 install:
     - choco upgrade python2 -y --no-progress
     - where python
+    - ls -alh /C/ProgramData/chocolatey/bin
+    - where pip
 
 script:
     - which --all bash
