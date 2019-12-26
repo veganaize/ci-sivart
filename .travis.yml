@@ -6,32 +6,40 @@ env:
         - JAVA_HOME=$HOME/labsjdk-ce-11.0.5-jvmci-19.3-b06/
         - EXTRA_JAVA_HOMES=$HOME/openjdk1.8.0_232-jvmci-19.3-b06/
         - PATH=/c/Progra~2/Micros~1.0/VC/bin/amd64:${PATH}
-        #- PATH=/c/Python27:${PATH}
         - PATH=$JAVA_HOME/bin:${PATH}
-        - PATH=$PWD/mx:${PATH}
+        - PATH=$HOME/mx:${PATH}
         
-#before_install:
-    #- env
-    #- choco upgrade python2 --no-progress
-    
-install:
+before_install:
     - cd $HOME
     
     - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
+    - echo --- Java 8 ---
     - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
     - openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
+    - echo ---
     
     - wget --quiet https://github.com/graalvm/labs-openjdk-11/releases/download/jvmci-19.3-b06/labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
+    - echo --- Java 11 ---
     - java -Xmx32m -version
     - javac -J-Xmx32m -version
+    - echo ---
     
     - cd $TRAVIS_BUILD_DIR
+
+install:
+    - cd $HOME
+    - git clone https://github.com/graalvm/mx.git
+    - cd $TRAVIS_BUILD_DIR/graal/compiler
+    #- mx clean
+    - mx build
+    - mx vm
+    #- mx unittest
     
 script:
     - python --version
-    - where java
-    - where cl
+    - java --version
+    - cl -Bv
     - env
 
