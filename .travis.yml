@@ -9,22 +9,22 @@ env:
         - PATH=$JAVA_HOME/bin:${PATH}
         - PATH=$HOME/mx:${PATH}
         
-before_install: skip
+before_install:
     - cd $HOME
     
-    - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
-    - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
-    - echo --- Java 8 ---
-    - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
-    - openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
-    - echo ---
+    #- wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
+    #- tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
+    #- echo --- Java 8 ---
+    #- openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
+    #- openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
+    #- echo ---
     
-    - wget --quiet https://github.com/graalvm/labs-openjdk-11/releases/download/jvmci-19.3-b06/labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
-    - tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
-    - echo --- Java 11 ---
-    - java -Xmx32m -version
-    - javac -J-Xmx32m -version
-    - echo ---
+    #- wget --quiet https://github.com/graalvm/labs-openjdk-11/releases/download/jvmci-19.3-b06/labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
+    #- tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
+    #- echo --- Java 11 ---
+    #- java -Xmx32m -version
+    #- javac -J-Xmx32m -version
+    #- echo ---
     
     - cd $TRAVIS_BUILD_DIR
 
