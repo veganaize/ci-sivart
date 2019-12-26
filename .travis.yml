@@ -9,7 +9,7 @@ env:
         - PATH=$JAVA_HOME/bin:${PATH}
         - PATH=$HOME/mx:${PATH}
         
-before_install:
+before_install: skip
     - cd $HOME
     
     - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
@@ -28,15 +28,8 @@ before_install:
     
     - cd $TRAVIS_BUILD_DIR
 
-install:
-    - cd $HOME
-    - git clone https://github.com/graalvm/mx.git
-    - cd $TRAVIS_BUILD_DIR/graal/compiler
-    #- mx clean
-    - mx build
-    - mx vm
-    #- mx unittest
-    
+install: where python
+
 script:
     - python --version
     - java --version
