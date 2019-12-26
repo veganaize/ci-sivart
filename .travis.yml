@@ -3,7 +3,7 @@ language: shell
 
 before_install:
     - env
-    - choco --no-progress upgrade python2
+    - choco upgrade python2 --no-progress
     
 install:
     - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
