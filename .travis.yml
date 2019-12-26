@@ -2,29 +2,22 @@ os: windows
 language: shell
 
 before_install:
-    - alias java="winpty java"
-    - alias javac="winpty javac"
-    - alias python="winpty python"
-    - alias pytest="winpty pytest"
-    - alias cl="winpty cl"
-    - alias link="winpty link"
-
     #- env
     - choco upgrade python2 --no-progress
     
 install:
     - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
-    - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
-    - openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
+    - winpty openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
+    - winpty openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
     
     - wget --quiet https://github.com/graalvm/labs-openjdk-11/releases/download/jvmci-19.3-b06/labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
-    - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/java -Xmx32m -version
-    - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
+    - winpty labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/java -Xmx32m -version
+    - winpty labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
 
 script:
-    - which python
+    - winpty python --version
     #- which java
     #- which cl
 
