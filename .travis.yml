@@ -6,9 +6,12 @@ before_install:
     - choco upgrade python2
     
 install:
-    - wget https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
-    - tar xvf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
+    - wget --no-progress https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
+    - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
+    - wget --no-progress https://developers.redhat.com/download-manager/file/java-11-openjdk-11.0.5.10-2.windows.redhat.x86_64.zip
+    - which 7z
+    - dir "C:\Program Files\7-Zip"
 
 script:
     - which python
