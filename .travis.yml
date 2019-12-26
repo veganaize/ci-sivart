@@ -3,8 +3,11 @@ language: shell
 
 env:
     global:
+        - MKS_HOME=/c/Progra~1/Git/usr/bin
         - JAVA_HOME=$HOME/labsjdk-ce-11.0.5-jvmci-19.3-b06/
         - EXTRA_JAVA_HOMES=$HOME/openjdk1.8.0_232-jvmci-19.3-b06/
+        
+        - PATH=$MKS_HOME:${PATH}
         - PATH=/c/Progra~2/Micros~1.0/VC/bin/amd64:${PATH}
         - PATH=$JAVA_HOME/bin:${PATH}
         - PATH=$HOME/mx:${PATH}
