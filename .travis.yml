@@ -9,9 +9,12 @@ install:
     - wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
+    - openjdk1.8.0_232-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
+    
     - wget --quiet https://github.com/graalvm/labs-openjdk-11/releases/download/jvmci-19.3-b06/labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
-    - ls -alh
+    - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/java -Xmx32m -version
+    - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
 
 script:
     - which python
