@@ -41,3 +41,5 @@ script:
     - python --version
     #- java --version
     #- cl -Bv
+    - cd /usr && pwd -W
+    
