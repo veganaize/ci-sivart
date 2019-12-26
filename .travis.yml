@@ -1,0 +1,10 @@
+os: windows
+
+before_install:
+    - env
+    - choco upgrade python2
+    
+install: echo $TRAVIS_HOST_NAME
+
+script: echo %TRAVIS_BUILD_DIR%
+
