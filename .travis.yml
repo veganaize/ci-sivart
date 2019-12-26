@@ -8,7 +8,7 @@ before_install:
 install:
     - wget https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - tar xvf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
-    - openjdk1.8.0_232-jvmci-19.3-b06\bin\java -Xmx32m -version
+    - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
 
 script: skip
 
