@@ -34,6 +34,9 @@ install:
     - where python
 
 script:
+    - which --all bash
+    - ls -alh $PROGRAMFILES
+    - ls -alh $PROGRAMFILES(X86)
     - python --version
     #- java --version
     #- cl -Bv
