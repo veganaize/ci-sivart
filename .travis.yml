@@ -10,8 +10,8 @@ install:
     - tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     - openjdk1.8.0_232-jvmci-19.3-b06/bin/java -Xmx32m -version
     - wget --quiet https://developers.redhat.com/download-manager/file/java-11-openjdk-11.0.5.10-2.windows.redhat.x86_64.zip
-    - which 7z
-    - dir "C:\Program Files\7-Zip"
+    - 7z x java-11-openjdk-11.0.5.10-2.windows.redhat.x86_64.zip
+    - dir java*
 
 script:
     - which python
