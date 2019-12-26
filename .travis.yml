@@ -2,7 +2,14 @@ os: windows
 language: shell
 
 before_install:
-    - env
+    - alias java="winpty java"
+    - alias javac="winpty javac"
+    - alias python="winpty python"
+    - alias pytest="winpty pytest"
+    - alias cl="winpty cl"
+    - alias link="winpty link"
+
+    #- env
     - choco upgrade python2 --no-progress
     
 install:
