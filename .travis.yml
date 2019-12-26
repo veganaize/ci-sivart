@@ -15,6 +15,6 @@ install:
 
 script:
     - which python
-    - which java
-    - which cl
+    #- which java
+    #- which cl
 
