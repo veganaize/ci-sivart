@@ -29,12 +29,12 @@ before_install:
     - cd $TRAVIS_BUILD_DIR
 
 install:
-    - choco upgrade all --noop
+    - choco upgrade python2 -y --no-progress
     - where python
 
 script:
     - python --version
-    - java --version
-    - cl -Bv
+    #- java --version
+    #- cl -Bv
     #- env
 
