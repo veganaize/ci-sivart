@@ -35,10 +35,9 @@ install:
 
 script:
     - which --all bash
-    - ls -alh $PROGRAMFILES
-    - ls -alh $PROGRAMFILES(X86)
+    - env
+    - ls -alh /c/progra~1
+    - ls -alh /c/progra~2
     - python --version
     #- java --version
     #- cl -Bv
-    #- env
-
