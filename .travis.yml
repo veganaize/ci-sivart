@@ -8,6 +8,7 @@ env:
         - PATH=/c/Progra~2/Micros~1.0/VC/bin/amd64:${PATH}
         - PATH=$JAVA_HOME/bin:${PATH}
         - PATH=$HOME/mx:${PATH}
+        - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
     - cd $HOME
