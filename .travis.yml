@@ -1,6 +1,15 @@
 os: windows
 language: shell
 
+env:
+    global:
+        - JAVA_HOME=/c/users/travis/labsjdk-ce-11.0.5-jvmci-19.3-b06/
+        - EXTRA_JAVA_HOMES=/c/users/travis/openjdk1.8.0_232-jvmci-19.3-b06/
+        - PATH=/c/Progra~2/Micros~1.0/VC/bin/amd64:${PATH}
+        #- PATH=/c/Python27:${PATH}
+        - PATH=$JAVA_HOME/bin:${PATH}
+        - PATH=$PWD/mx:${PATH}
+        
 before_install:
     #- env
     - choco upgrade python2 --no-progress
@@ -15,9 +24,10 @@ install:
     - tar xf labsjdk-ce-11.0.5+10-jvmci-19.3-b06-windows-amd64.tar.gz
     - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/java -Xmx32m -version
     - labsjdk-ce-11.0.5-jvmci-19.3-b06/bin/javac -J-Xmx32m -version
-
+    
 script:
     - python --version
-    #- which java
-    #- which cl
+    - where java
+    - where cl
+    - env
 
