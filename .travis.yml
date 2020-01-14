@@ -14,6 +14,8 @@ env:
         - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
+    - cd /c/Progra~2/Windows\ Kits/10/include
+    - ls -alh
     - env
     - cd $HOME
     
