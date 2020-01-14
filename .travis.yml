@@ -14,6 +14,7 @@ env:
         - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
+    - which -a cl.exe
     - cd /c/Progra~2/Windows\ Kits/10/include
     - ls -alh
     - env
