@@ -15,7 +15,7 @@ env:
         
 before_install:
     - cd /c/Progra~2
-    - cmd /c "dir /x"
+    - cmd //c "dir /x"
     - which -a cl.exe
     - cd /c/Progra~2/Windows\ Kits/10/include
     - ls -alh
