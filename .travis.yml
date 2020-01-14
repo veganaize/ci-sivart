@@ -15,6 +15,7 @@ env:
         
 before_install:
     - cd $HOME
+    - which -a stddef.h
     
     #- wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     #- tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
