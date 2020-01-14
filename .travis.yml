@@ -14,10 +14,8 @@ env:
         - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
+    - env
     - cd $HOME
-    
-    - cd /c/progra~2
-    - find . |grep stddef.h
     
     #- wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
     #- tar xf openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
@@ -43,7 +41,6 @@ install:
 
 script:
     - which --all bash
-    - env
     - ls -alh /c/progra~1
     - ls -alh /c/progra~2
     - python --version
