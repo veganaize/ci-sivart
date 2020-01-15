@@ -16,6 +16,9 @@ env:
 before_install:
     - env
     - echo --------------------------------------------------------------
+    - pwd -W
+    -ls -alh
+    
     - cd ..
     - mv graal /c/
     
