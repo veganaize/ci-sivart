@@ -16,17 +16,22 @@ env:
 before_install:
     - env
     - echo --------------------------------------------------------------
-    - pwd -W
-    - ls -alh
+
+    - reg query HKLM\SYSTEM\CurrentControlSet\Control\FileSystem //v LongPathsEnabled    
+    - reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem //v LongPathsEnabled /t REG_DWORD /d 1 /f
+    - reg query HKLM\SYSTEM\CurrentControlSet\Control\FileSystem //v LongPathsEnabled
     
-    - cd ..
-    - mv ci-sivart /c/
+    #- pwd -W
+    #- ls -alh
     
-    - cd /c
-    - cd /c/ci-sivart
-    - pwd -W
-    - touch test_this
-    - ls -alh /c/ci-sivart
+    #- cd ..
+    #- mv ci-sivart /c/
+    
+    #- cd /c
+    #- cd /c/ci-sivart
+    #- pwd -W
+    #- touch test_this
+    #- ls -alh /c/ci-sivart
         
     #- travis_wait echo hello
     
