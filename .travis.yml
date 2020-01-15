@@ -20,13 +20,13 @@ before_install:
     - ls -alh
     
     - cd ..
-    - mv graal /c/
+    - mv ci-sivart /c/
     
     - cd /c
-    - cd /c/graal
+    - cd /c/ci-sivart
     - pwd -W
     - touch test_this
-    - ls -alh /c/graal
+    - ls -alh /c/sivart
         
     #- travis_wait echo hello
     
