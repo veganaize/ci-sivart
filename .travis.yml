@@ -26,7 +26,7 @@ before_install:
     - cd /c/ci-sivart
     - pwd -W
     - touch test_this
-    - ls -alh /c/sivart
+    - ls -alh /c/ci-sivart
         
     #- travis_wait echo hello
     
