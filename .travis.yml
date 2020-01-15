@@ -14,12 +14,14 @@ env:
         - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
-    - cd /c/Progra~2
-    - cmd //c "dir /x"
-    - which -a cl.exe
-    - cd /c/Progra~2/Windows\ Kits/10/include
-    - ls -alh
-    - env
+    - travis_wait --help
+    
+    #- cd /c/Progra~2
+    #- cmd //c "dir /x"
+    #- which -a cl.exe
+    #- cd /c/Progra~2/Windows\ Kits/10/include
+    #- ls -alh
+    #- env
     - cd $HOME
     
     #- wget --quiet https://github.com/graalvm/openjdk8-jvmci-builder/releases/download/jvmci-19.3-b06/openjdk-8u232-jvmci-19.3-b06-windows-amd64.tar.gz
@@ -39,17 +41,17 @@ before_install:
     - cd $TRAVIS_BUILD_DIR
 
 install:
-    - choco upgrade python2 -y --no-progress
-    - where python
-    - ls -alh /C/ProgramData/chocolatey/bin
-    - where pip
+    #- choco upgrade python2 -y --no-progress
+    #- where python
+    #- ls -alh /C/ProgramData/chocolatey/bin
+    #- where pip
 
 script:
-    - which --all bash
-    - ls -alh /c/progra~1
-    - ls -alh /c/progra~2
-    - python --version
+    #- which --all bash
+    #- ls -alh /c/progra~1
+    #- ls -alh /c/progra~2
+    #- python --version
     #- java --version
     #- cl -Bv
-    - cd /usr && pwd -W
+    #- cd /usr && pwd -W
     
