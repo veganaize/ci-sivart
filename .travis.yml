@@ -14,7 +14,7 @@ env:
         - PATH=/c/python27:/c/python27/scripts:${PATH}
         
 before_install:
-    - travis_wait --help
+    - travis_wait echo hello
     
     #- cd /c/Progra~2
     #- cmd //c "dir /x"
